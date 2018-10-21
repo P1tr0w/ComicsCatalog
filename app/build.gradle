@@ -73,22 +73,13 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     //KOTLIN TESTING
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.11.0'
-    testImplementation 'org.mockito:mockito-inline:2.11.0'
-    testImplementation 'org.assertj:assertj-core:3.8.0'
-    testImplementation "com.nhaarman:mockito-kotlin-kt1.1:1.6.0"
-    testImplementation 'org.amshove.kluent:kluent:1.15'
+    androidTestImplementation "androidx.arch.core:core-testing:$archCoreTesting_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:$uiAutomatorVersion"
+    testImplementation "junit:junit:$junitVersion"
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test:rules:1.0.1'
-    androidTestImplementation 'com.android.support:support-annotations:27.0.0'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
-
-    testImplementation "android.arch.core:core-testing:$archCoreTesting_version"
     testImplementation "com.squareup.okhttp3:mockwebserver:$mockWebServer_version"
 
     //DATABINDING
